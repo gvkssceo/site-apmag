@@ -1,0 +1,47 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+.display-font { 
+    font-family: 'Playfair Display', serif; 
+}
+.fade-in-luxury { 
+    animation: fadeInLuxury 1.2s ease-out; 
+}
+@keyframes fadeInLuxury { 
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+}
+.luxury-card { 
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.luxury-card:hover { 
+    transform: translateY(-12px); 
+}
+.cinematic-overlay { 
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); 
+}
+.warm-gradient { 
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(184, 134, 11, 0.1) 100%); 
+}
+.text-gold { 
+    color: #d4af37; 
+}
+.luxury-bg-pattern {
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(184, 134, 11, 0.1) 0%, transparent 50%);
+}
+.elegant-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+.glow-effect {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+

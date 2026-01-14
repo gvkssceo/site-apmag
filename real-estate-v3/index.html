@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Estates - Exquisite Living Experiences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-neutral-900 text-neutral-100">
+    
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800/50">
+        <nav class="container mx-auto px-6 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 border-2 border-amber-600/50 rounded-full flex items-center justify-center glow-effect">
+                        <span class="text-amber-500 display-font font-bold text-2xl">L</span>
+                    </div>
+                    <span class="text-white display-font font-semibold text-2xl tracking-wide">Luxe Estates</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#about" class="text-neutral-300 hover:text-amber-500 transition font-light tracking-wide">About</a>
+                    <a href="#ventures" class="text-neutral-300 hover:text-amber-500 transition font-light tracking-wide">Collections</a>
+                    <a href="#contact" class="text-neutral-300 hover:text-amber-500 transition font-light tracking-wide">Contact</a>
+                    <a href="tel:+917441143143" class="border border-amber-600/50 text-amber-500 hover:bg-amber-600 hover:text-neutral-900 px-8 py-2.5 font-light tracking-wider transition uppercase text-sm">
+                        7441 143 143
+                    </a>
+                </div>
+                
+                <button id="mobileMenuBtn" class="md:hidden text-neutral-300">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div id="mobileMenu" class="hidden md:hidden mt-6 pb-6 space-y-4 border-t border-neutral-800 pt-6">
+                <a href="#about" class="block text-neutral-300 py-3 hover:text-amber-500 transition tracking-wide">About</a>
+                <a href="#ventures" class="block text-neutral-300 py-3 hover:text-amber-500 transition tracking-wide">Collections</a>
+                <a href="#contact" class="block text-neutral-300 py-3 hover:text-amber-500 transition tracking-wide">Contact</a>
+                <a href="tel:+917441143143" class="block border border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-neutral-900 px-6 py-3 text-center font-light tracking-wider transition uppercase text-sm mt-4">7441 143 143</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Split Screen Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+        <div class="grid md:grid-cols-2 h-screen">
+            <!-- Left: Text Content -->
+            <div class="flex items-center justify-center p-12 bg-neutral-950 luxury-bg-pattern">
+                <div class="max-w-lg fade-in-luxury">
+                    <div class="elegant-divider w-24 mb-8"></div>
+                    <span class="text-amber-500 text-sm uppercase tracking-[0.4em] font-light mb-6 block">Exquisite Living</span>
+                    <h1 class="text-6xl md:text-7xl display-font font-bold text-white mb-8 leading-[0.95]">
+                        Where Dreams Become Reality
+                    </h1>
+                    <p class="text-xl text-neutral-300 mb-10 font-light tracking-wide leading-relaxed">
+                        Curated luxury properties across India's most prestigious locations. Experience unparalleled elegance and sophistication.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="#ventures" class="inline-block bg-amber-600 hover:bg-amber-700 text-neutral-900 px-10 py-4 text-lg font-light tracking-wider uppercase transition border border-amber-600">
+                            View Collections
+                        </a>
+                        <a href="#contact" class="block text-amber-500 hover:text-amber-400 text-lg font-light tracking-wide transition mt-4">
+                            Schedule Private Viewing →
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right: Image -->
+            <div class="relative hidden md:block parallax-slow">
+                <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1920&q=80" alt="Luxury Estate" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-l from-neutral-950/50 to-transparent"></div>
+                <div class="absolute bottom-12 left-12 right-12">
+                    <div class="text-white">
+                        <div class="text-5xl display-font font-bold mb-2">Est. 1999</div>
+                        <div class="text-neutral-300 font-light">25 Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section with Elegant Design -->
+    <section class="py-24 bg-neutral-950 border-y border-neutral-800/50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="text-center">
+                    <div class="elegant-divider w-16 mx-auto mb-6"></div>
+                    <div class="text-5xl md:text-6xl display-font font-bold text-amber-500 mb-4 counter" data-target="25">0</div>
+                    <div class="text-neutral-400 font-light tracking-wider uppercase text-sm">Years Excellence</div>
+                </div>
+                <div class="text-center">
+                    <div class="elegant-divider w-16 mx-auto mb-6"></div>
+                    <div class="text-5xl md:text-6xl display-font font-bold text-amber-500 mb-4 counter" data-target="500">0</div>
+                    <div class="text-neutral-400 font-light tracking-wider uppercase text-sm">Masterpieces</div>
+                </div>
+                <div class="text-center">
+                    <div class="elegant-divider w-16 mx-auto mb-6"></div>
+                    <div class="text-5xl md:text-6xl display-font font-bold text-amber-500 mb-4 counter" data-target="10000">0</div>
+                    <div class="text-neutral-400 font-light tracking-wider uppercase text-sm">Elite Clients</div>
+                </div>
+                <div class="text-center">
+                    <div class="elegant-divider w-16 mx-auto mb-6"></div>
+                    <div class="text-5xl md:text-6xl display-font font-bold text-amber-500 mb-4 counter" data-target="50">0</div>
+                    <div class="text-neutral-400 font-light tracking-wider uppercase text-sm">Awards</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Split Layout -->
+    <section id="about" class="py-32 bg-neutral-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <span class="text-amber-500 text-sm uppercase tracking-[0.3em] font-light mb-6 block">Our Legacy</span>
+                    <h2 class="text-5xl md:text-6xl display-font font-bold text-white mb-10 leading-tight">Curated Excellence</h2>
+                </div>
+                <div>
+                    <p class="text-xl text-neutral-300 leading-relaxed font-light tracking-wide">
+                        Each property in our collection represents a unique vision of luxury, crafted with meticulous attention to detail and an unwavering commitment to excellence across India's most prestigious locations.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-neutral-950 p-10 border border-neutral-800/50 luxury-card text-center">
+                    <div class="w-20 h-20 border border-amber-600/30 rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl display-font font-semibold text-white mb-5">Exceptional Design</h3>
+                    <p class="text-neutral-400 leading-relaxed font-light">Architectural masterpieces blending timeless elegance with contemporary sophistication.</p>
+                </div>
+                <div class="bg-neutral-950 p-10 border border-amber-600/20 luxury-card text-center glow-effect">
+                    <div class="w-20 h-20 border border-amber-600/50 rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl display-font font-semibold text-white mb-5">Prestige Locations</h3>
+                    <p class="text-neutral-400 leading-relaxed font-light">World-renowned addresses in Mumbai, Delhi, Bangalore, and other prime Indian cities.</p>
+                </div>
+                <div class="bg-neutral-950 p-10 border border-neutral-800/50 luxury-card text-center">
+                    <div class="w-20 h-20 border border-amber-600/30 rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl display-font font-semibold text-white mb-5">Discrete Service</h3>
+                    <p class="text-neutral-400 leading-relaxed font-light">Personalized concierge service ensuring the highest level of privacy and attention.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section with Large Images -->
+    <section id="ventures" class="py-32 bg-neutral-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20 fade-in-luxury">
+                <span class="text-amber-500 text-sm uppercase tracking-[0.3em] font-light mb-6 block">Exclusive Collection</span>
+                <h2 class="text-5xl md:text-6xl display-font font-bold text-white mb-8 leading-tight">Signature Properties</h2>
+            </div>
+            
+            <div class="space-y-16">
+                <!-- Property 1 - Full Width -->
+                <div class="grid md:grid-cols-2 gap-0 bg-neutral-900 rounded-3xl overflow-hidden luxury-card">
+                    <div class="relative h-96 md:h-auto">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1200&q=80" alt="Luxury Villa" class="w-full h-full object-cover">
+                        <div class="absolute top-6 left-6">
+                            <span class="bg-amber-600/90 backdrop-blur-sm text-neutral-900 px-4 py-2 text-sm font-light tracking-wider uppercase">Featured</span>
+                        </div>
+                    </div>
+                    <div class="p-12 flex flex-col justify-center">
+                        <h3 class="text-4xl display-font font-bold text-white mb-4">Malabar Hill Residences</h3>
+                        <p class="text-neutral-300 mb-6 flex items-center font-light text-lg">
+                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Malabar Hill, Mumbai, Maharashtra
+                        </p>
+                        <div class="elegant-divider w-24 mb-6"></div>
+                        <div class="text-5xl display-font font-bold text-amber-500 mb-8">₹18.5 Cr</div>
+                        <a href="#" class="inline-block border border-amber-600/50 text-amber-500 hover:bg-amber-600 hover:text-neutral-900 px-8 py-3 font-light tracking-wider uppercase transition text-sm">View Details →</a>
+                    </div>
+                </div>
+
+                <!-- Property 2 - Reversed -->
+                <div class="grid md:grid-cols-2 gap-0 bg-neutral-900 rounded-3xl overflow-hidden luxury-card">
+                    <div class="md:order-2 p-12 flex flex-col justify-center">
+                        <h3 class="text-4xl display-font font-bold text-white mb-4">Lutyens Bungalow</h3>
+                        <p class="text-neutral-300 mb-6 flex items-center font-light text-lg">
+                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Lutyens Delhi, New Delhi
+                        </p>
+                        <div class="elegant-divider w-24 mb-6"></div>
+                        <div class="text-5xl display-font font-bold text-amber-500 mb-8">₹25 Cr</div>
+                        <a href="#" class="inline-block border border-amber-600/50 text-amber-500 hover:bg-amber-600 hover:text-neutral-900 px-8 py-3 font-light tracking-wider uppercase transition text-sm">View Details →</a>
+                    </div>
+                    <div class="md:order-1 relative h-96 md:h-auto">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" alt="Penthouse" class="w-full h-full object-cover">
+                        <div class="absolute top-6 right-6">
+                            <span class="bg-neutral-900/70 backdrop-blur-sm text-amber-500 px-4 py-2 text-sm font-light tracking-wider uppercase border border-amber-500/30">Heritage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="grid md:grid-cols-2 gap-0 bg-neutral-900 rounded-3xl overflow-hidden luxury-card">
+                    <div class="relative h-96 md:h-auto">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80" alt="Estate" class="w-full h-full object-cover">
+                        <div class="absolute top-6 left-6">
+                            <span class="bg-amber-600/90 backdrop-blur-sm text-neutral-900 px-4 py-2 text-sm font-light tracking-wider uppercase">Luxury</span>
+                        </div>
+                    </div>
+                    <div class="p-12 flex flex-col justify-center">
+                        <h3 class="text-4xl display-font font-bold text-white mb-4">Koramangala Estate</h3>
+                        <p class="text-neutral-300 mb-6 flex items-center font-light text-lg">
+                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Koramangala, Bangalore, Karnataka
+                        </p>
+                        <div class="elegant-divider w-24 mb-6"></div>
+                        <div class="text-5xl display-font font-bold text-amber-500 mb-8">₹12.8 Cr</div>
+                        <a href="#" class="inline-block border border-amber-600/50 text-amber-500 hover:bg-amber-600 hover:text-neutral-900 px-8 py-3 font-light tracking-wider uppercase transition text-sm">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 bg-neutral-900 border-y border-neutral-800/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-amber-500 text-sm uppercase tracking-[0.3em] font-light mb-6 block">Testimonials</span>
+                <h2 class="text-5xl md:text-6xl display-font font-bold text-white mb-8">Client Experiences</h2>
+            </div>
+            <div class="max-w-5xl mx-auto relative overflow-hidden">
+                <div id="testimonialsContainer" class="flex transition-transform duration-1000 ease-in-out">
+                    <div class="min-w-full px-6">
+                        <div class="bg-neutral-950 p-12 border border-neutral-800/50">
+                            <div class="flex text-amber-500 text-3xl mb-8">★★★★★</div>
+                            <p class="text-2xl text-neutral-300 mb-10 leading-relaxed font-light italic">"An extraordinary experience from start to finish. The attention to detail and personalized service exceeded all expectations. Truly exceptional."</p>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 border-2 border-amber-600/30 rounded-full flex items-center justify-center text-amber-500 display-font font-bold text-xl mr-6">SM</div>
+                                <div>
+                                    <p class="display-font font-semibold text-white text-xl">Siddharth Mehta</p>
+                                    <p class="text-neutral-400 font-light tracking-wide">Property Owner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-w-full px-6">
+                        <div class="bg-neutral-950 p-12 border border-neutral-800/50">
+                            <div class="flex text-amber-500 text-3xl mb-8">★★★★★</div>
+                            <p class="text-2xl text-neutral-300 mb-10 leading-relaxed font-light italic">"Working with Luxe Estates was a privilege. Their expertise in luxury properties is unmatched, and their discretion is impeccable."</p>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 border-2 border-amber-600/30 rounded-full flex items-center justify-center text-amber-500 display-font font-bold text-xl mr-6">RK</div>
+                                <div>
+                                    <p class="display-font font-semibold text-white text-xl">Rajesh Kapoor</p>
+                                    <p class="text-neutral-400 font-light tracking-wide">Investor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-w-full px-6">
+                        <div class="bg-neutral-950 p-12 border border-neutral-800/50">
+                            <div class="flex text-amber-500 text-3xl mb-8">★★★★★</div>
+                            <p class="text-2xl text-neutral-300 mb-10 leading-relaxed font-light italic">"The level of sophistication and professionalism is remarkable. They understand luxury in its truest form."</p>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 border-2 border-amber-600/30 rounded-full flex items-center justify-center text-amber-500 display-font font-bold text-xl mr-6">AK</div>
+                                <div>
+                                    <p class="display-font font-semibold text-white text-xl">Ananya Khanna</p>
+                                    <p class="text-neutral-400 font-light tracking-wide">Collector</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-neutral-950 text-neutral-400 py-20 border-t border-neutral-800/50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-16 mb-16">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 border-2 border-amber-600/50 rounded-full flex items-center justify-center glow-effect">
+                            <span class="text-amber-500 display-font font-bold text-2xl">L</span>
+                        </div>
+                        <span class="text-white display-font font-semibold text-2xl tracking-wide">Luxe Estates</span>
+                    </div>
+                    <p class="text-neutral-500 mb-8 leading-relaxed font-light">Curating India's most exceptional properties for discerning clients since 1999.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 border border-neutral-700 hover:border-amber-600 hover:text-amber-500 rounded-full flex items-center justify-center transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-neutral-700 hover:border-amber-600 hover:text-amber-500 rounded-full flex items-center justify-center transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-neutral-700 hover:border-amber-600 hover:text-amber-500 rounded-full flex items-center justify-center transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.533.96-.909 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.533-1.379-.909-.42-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white display-font font-semibold text-lg mb-8 tracking-wide">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#about" class="hover:text-amber-500 transition font-light tracking-wide">About Us</a></li>
+                        <li><a href="#ventures" class="hover:text-amber-500 transition font-light tracking-wide">Collections</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition font-light tracking-wide">Services</a></li>
+                        <li><a href="#contact" class="hover:text-amber-500 transition font-light tracking-wide">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white display-font font-semibold text-lg mb-8 tracking-wide">Contact Info</h3>
+                    <ul class="space-y-5">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-4 mt-1 flex-shrink-0 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="font-light">789, Cuffe Parade, Colaba, Mumbai, Maharashtra 400005</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-4 flex-shrink-0 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <a href="tel:+917441143143" class="hover:text-amber-500 transition font-light">7441 143 143</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-4 flex-shrink-0 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <a href="mailto:Gvkssjobs@gmail.com" class="hover:text-amber-500 transition font-light">Gvkssjobs@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white display-font font-semibold text-lg mb-8 tracking-wide">Find Us</h3>
+                    <div class="bg-neutral-900 p-4 border border-neutral-800/50 inline-block">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.google.com/?q=Cuffe+Parade,+Colaba,+Mumbai,+Maharashtra+400005" alt="QR Code" class="w-32 h-32">
+                    </div>
+                    <p class="text-sm text-neutral-500 mt-4 font-light tracking-wide">Scan for location</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-800/50 pt-10 mt-10 text-center">
+                <p class="text-neutral-500 font-light tracking-wide">&copy; 2024 Luxe Estates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
