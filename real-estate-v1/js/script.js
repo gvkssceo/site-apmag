@@ -4,6 +4,9 @@ const mobileMenu = document.getElementById('mobileMenu');
 
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    // Add ARIA attribute for accessibility
+    const isExpanded = !mobileMenu.classList.contains('hidden');
+    mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
 });
 
 // Smooth Scroll
@@ -99,20 +102,72 @@ indicators.forEach((indicator, index) => {
     });
 });
 
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+if (!scrollToTopBtn && typeof document !== 'undefined') {
+    const btn = document.createElement('button');
+    btn.id = 'scrollToTopBtn';
+    btn.className = 'scroll-to-top';
+    btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>';
+    btn.setAttribute('aria-label', 'Scroll to top');
+    document.body.appendChild(btn);
+}
+
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollToTopBtn');
+    if (btn) {
+        if (window.scrollY > 300) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }
+});
+
+const scrollBtn = document.getElementById('scrollToTopBtn');
+if (scrollBtn) {
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
 // Auto-scroll Testimonials
 let testimonialIndex = 0;
 const testimonialsContainer = document.getElementById('testimonialsContainer');
 const testimonialSlides = document.querySelectorAll('#testimonialsContainer > div');
+const testimonialIndicators = document.querySelectorAll('.testimonial-indicator');
 
 function updateTestimonials() {
     const translateX = -testimonialIndex * 100;
     testimonialsContainer.style.transform = `translateX(${translateX}%)`;
+    
+    // Update indicators
+    testimonialIndicators.forEach((indicator, index) => {
+        if (index === testimonialIndex) {
+            indicator.classList.remove('bg-slate-300');
+            indicator.classList.add('bg-amber-500');
+        } else {
+            indicator.classList.remove('bg-amber-500');
+            indicator.classList.add('bg-slate-300');
+        }
+    });
 }
 
-setInterval(() => {
-    testimonialIndex = (testimonialIndex + 1) % testimonialSlides.length;
-    updateTestimonials();
-}, 5000);
+// Add click handlers to indicators
+testimonialIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        testimonialIndex = index;
+        updateTestimonials();
+    });
+});
+
+// Auto-scroll every 6 seconds
+if (testimonialSlides.length > 0) {
+    setInterval(() => {
+        testimonialIndex = (testimonialIndex + 1) % testimonialSlides.length;
+        updateTestimonials();
+    }, 6000);
+}
 
 // Header Scroll Effect
 window.addEventListener('scroll', () => {

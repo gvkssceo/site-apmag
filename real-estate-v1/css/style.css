@@ -41,3 +41,147 @@ body {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.7) 100%); 
 }
 
+/* Touch-friendly elements */
+.touch-friendly {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Testimonial indicator animation */
+.testimonial-indicator {
+    cursor: pointer;
+}
+.testimonial-indicator:hover {
+    transform: scale(1.2);
+}
+
+/* Improve button touch targets */
+button, a[class*="bg-"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Focus states for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid #d97706;
+    outline-offset: 2px;
+}
+
+/* Enhanced button interactions */
+button, a[class*="bg-"] { 
+    transition: all 0.2s ease; 
+}
+button:active, a[class*="bg-"]:active {
+    transform: scale(0.98);
+}
+
+/* Link hover improvements */
+a:not([class]) {
+    position: relative;
+}
+a:not([class]):hover {
+    color: #f59e0b;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.scroll-to-top.show {
+    display: flex;
+}
+
+/* ======= RESPONSIVE MEDIA QUERIES ======= */
+
+/* Mobile Devices (320px to 640px) */
+@media (max-width: 640px) {
+    /* Hero Section */
+    h1 {
+        word-break: break-word;
+        line-height: 1.2;
+    }
+    
+    p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .relative.z-10 {
+        padding: 1rem;
+    }
+    
+    /* Button Adjustments */
+    .flex.flex-col button,
+    .flex.flex-col a {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Tablet Devices (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* Hero Section */
+    h1 {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Button Container */
+    .flex.flex-col.sm\:flex-row {
+        gap: 1rem;
+    }
+}
+
+/* Large Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 3.75rem;
+    }
+}
+
+/* Extra Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    
+    .relative.z-10 {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .relative.min-h-screen {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+}
+

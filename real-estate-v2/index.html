@@ -49,40 +49,68 @@
     </header>
 
     <!-- Hero Section with Diagonal Design -->
-    <section class="relative min-h-screen flex items-center overflow-hidden pt-20 bg-gray-50">
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-16 sm:pt-18 md:pt-20 pb-8 sm:pb-10 md:pb-12 bg-gray-50">
         <div class="absolute inset-0 tech-gradient hero-pattern"></div>
         
-        <div class="container mx-auto px-4 py-12 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="container mx-auto px-4 sm:px-5 md:px-6 lg:px-8 py-8 sm:py-10 md:py-12 relative z-10">
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
                 <div class="fade-up">
-                    <div class="inline-block bg-gray-200/80 backdrop-blur-sm text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-sm">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm text-gray-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-5 md:mb-6 border border-cyan-500/20 shadow-sm">
+                        <span class="w-2 h-2 bg-cyan-500 rounded-full"></span>
                         Smart Property Solutions
                     </div>
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
-                        Find Your Dream Home with Technology
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 mb-4 sm:mb-5 md:mb-6 lg:mb-8 leading-tight">
+                        Find Your Dream Home with <span class="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Technology</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-600 mb-10 font-light leading-relaxed">
+                    <p class="text-base sm:text-lg md:text-xl lg:text-xl text-gray-600 mb-6 sm:mb-7 md:mb-8 lg:mb-10 font-light leading-relaxed">
                         Experience the future of real estate with AI-powered searches, virtual tours, and instant property matching.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#ventures" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition shadow-xl">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="#ventures" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-xl text-sm sm:text-base md:text-lg font-bold transition shadow-xl hover:shadow-2xl active:scale-95 touch-friendly">
                             Explore Properties
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
                         </a>
-                        <a href="#contact" class="inline-block bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl text-lg font-bold transition shadow-lg">
+                        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 border-2 border-gray-300 hover:border-cyan-500 text-gray-700 hover:text-cyan-600 px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-xl text-sm sm:text-base md:text-lg font-bold transition shadow-lg hover:shadow-xl active:scale-95 touch-friendly">
                             Book Visit
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
                         </a>
                     </div>
                 </div>
                 <div class="hidden md:block">
-                    <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 border border-white/50 shadow-2xl">
-                        <div class="space-y-4">
-                            <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/40 shadow-lg">
-                                <div class="text-cyan-600 text-sm font-semibold mb-2">Quick Search</div>
-                                <div class="text-gray-900 text-3xl font-bold">2,450+ Properties</div>
-                            </div>
-                            <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/40 shadow-lg">
-                                <div class="text-cyan-600 text-sm font-semibold mb-2">Active Deals</div>
-                                <div class="text-gray-900 text-3xl font-bold">₹125 Cr+ Worth</div>
+                    <div class="relative">
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl opacity-20 blur-xl"></div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl opacity-20 blur-xl"></div>
+                        
+                        <div class="relative bg-white/80 backdrop-blur-lg rounded-3xl p-6 md:p-7 lg:p-8 border border-white/60 shadow-2xl hover:shadow-3xl transition-all duration-500">
+                            <div class="space-y-4 md:space-y-5">
+                                <div class="group bg-gradient-to-br from-white/90 to-cyan-50/50 backdrop-blur-sm rounded-2xl p-5 md:p-6 lg:p-7 border border-cyan-500/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="text-cyan-700 text-xs md:text-sm font-bold uppercase tracking-wide">Quick Search</div>
+                                    </div>
+                                    <div class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-black">2,450+ <span class="text-lg md:text-xl lg:text-2xl text-gray-600 font-semibold">Properties</span></div>
+                                    <div class="mt-2 text-xs text-gray-500">Updated today</div>
+                                </div>
+                                <div class="group bg-gradient-to-br from-white/90 to-blue-50/50 backdrop-blur-sm rounded-2xl p-5 md:p-6 lg:p-7 border border-blue-500/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
+                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="text-blue-700 text-xs md:text-sm font-bold uppercase tracking-wide">Active Deals</div>
+                                    </div>
+                                    <div class="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-black">₹125 Cr+ <span class="text-lg md:text-xl lg:text-2xl text-gray-600 font-semibold">Worth</span></div>
+                                    <div class="mt-2 text-xs text-gray-500">Live transactions</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -92,25 +120,25 @@
     </section>
 
     <!-- Stats Section with Diagonal Cards -->
-    <section class="py-20 bg-white relative overflow-hidden">
+    <section class="py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 bg-white relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-cyan-500/10 to-transparent"></div>
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="stats-card rounded-2xl p-6 text-center card-zoom transform rotate-1">
-                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-2 counter" data-target="25">0</div>
-                    <div class="text-gray-600 font-semibold">Years Experience</div>
+        <div class="container mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8">
+                <div class="stats-card rounded-2xl p-3 sm:p-4 md:p-5 lg:p-5 xl:p-6 text-center card-zoom transform rotate-1">
+                    <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-1.5 sm:mb-2 counter" data-target="25">0</div>
+                    <div class="text-gray-600 font-semibold text-xs sm:text-sm md:text-base">Years Experience</div>
                 </div>
-                <div class="stats-card rounded-2xl p-6 text-center card-zoom transform -rotate-1">
-                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2 counter" data-target="500">0</div>
-                    <div class="text-gray-600 font-semibold">Projects</div>
+                <div class="stats-card rounded-2xl p-3 sm:p-4 md:p-5 lg:p-5 xl:p-6 text-center card-zoom transform -rotate-1">
+                    <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1.5 sm:mb-2 counter" data-target="500">0</div>
+                    <div class="text-gray-600 font-semibold text-xs sm:text-sm md:text-base">Projects</div>
                 </div>
-                <div class="stats-card rounded-2xl p-6 text-center card-zoom transform rotate-1">
-                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 counter" data-target="10000">0</div>
-                    <div class="text-gray-600 font-semibold">Happy Clients</div>
+                <div class="stats-card rounded-2xl p-3 sm:p-4 md:p-5 lg:p-5 xl:p-6 text-center card-zoom transform rotate-1">
+                    <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1.5 sm:mb-2 counter" data-target="10000">0</div>
+                    <div class="text-gray-600 font-semibold text-xs sm:text-sm md:text-base">Happy Clients</div>
                 </div>
-                <div class="stats-card rounded-2xl p-6 text-center card-zoom transform -rotate-1">
-                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent mb-2 counter" data-target="50">0</div>
-                    <div class="text-gray-600 font-semibold">Awards</div>
+                <div class="stats-card rounded-2xl p-3 sm:p-4 md:p-5 lg:p-5 xl:p-6 text-center card-zoom transform -rotate-1">
+                    <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent mb-1.5 sm:mb-2 counter" data-target="50">0</div>
+                    <div class="text-gray-600 font-semibold text-xs sm:text-sm md:text-base">Awards</div>
                 </div>
             </div>
         </div>
@@ -248,28 +276,128 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-20 bg-gradient-to-br from-cyan-50 to-blue-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">Client Reviews</h2>
+    <section class="py-12 sm:py-14 md:py-16 lg:py-20 bg-gradient-to-br from-cyan-50 via-blue-50/50 to-purple-50/30 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div class="container mx-auto px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm text-cyan-700 px-4 py-2 rounded-full text-xs md:text-sm font-semibold border border-cyan-500/20 mb-4 md:mb-5 lg:mb-6">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"/>
+                    </svg>
+                    Client Reviews
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                    What Our <span class="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Clients Say</span>
+                </h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-600">Trusted by thousands of satisfied clients</p>
             </div>
             <div class="max-w-5xl mx-auto relative overflow-hidden">
                 <div id="testimonialsContainer" class="flex transition-transform duration-700 ease-in-out">
-                    <div class="min-w-full px-4">
-                        <div class="bg-white p-10 rounded-3xl shadow-xl">
-                            <div class="flex text-yellow-400 text-2xl mb-6">★★★★★</div>
-                            <p class="text-xl text-gray-700 mb-8 leading-relaxed italic">"The tech platform made finding our dream home so easy! Virtual tours saved us so much time."</p>
-                            <div class="flex items-center">
-                                <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">RS</div>
+                    <!-- Testimonial 1 -->
+                    <div class="min-w-full px-2 sm:px-3 md:px-4">
+                        <div class="group bg-white/80 backdrop-blur-sm p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 hover:-translate-y-2">
+                            <!-- Quote icon -->
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Stars -->
+                            <div class="flex items-center gap-1 mb-4 sm:mb-5 md:mb-6">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <span class="ml-2 text-sm sm:text-base font-bold text-gray-700">5.0</span>
+                            </div>
+                            
+                            <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-5 sm:mb-6 md:mb-8 leading-relaxed italic">"The tech platform made finding our dream home so easy! Virtual tours saved us so much time and the AI recommendations were spot-on."</p>
+                            
+                            <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-lg sm:text-xl shadow-lg flex-shrink-0">RS</div>
                                 <div>
-                                    <p class="font-bold text-gray-900 text-lg">Ravi Singh</p>
-                                    <p class="text-gray-600">Homebuyer</p>
+                                    <p class="font-bold text-gray-900 text-base sm:text-lg">Ravi Singh</p>
+                                    <p class="text-gray-600 text-sm sm:text-base">Homebuyer</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="min-w-full px-4">
-                        <div class="bg-white p-10 rounded-3xl shadow-xl">
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="min-w-full px-2 sm:px-3 md:px-4">
+                        <div class="group bg-white/80 backdrop-blur-sm p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 hover:-translate-y-2">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="flex items-center gap-1 mb-4 sm:mb-5 md:mb-6">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <span class="ml-2 text-sm sm:text-base font-bold text-gray-700">5.0</span>
+                            </div>
+                            
+                            <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-5 sm:mb-6 md:mb-8 leading-relaxed italic">"Incredible service and innovative tools. The team is highly professional and made my investment journey seamless!"</p>
+                            
+                            <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center text-white font-bold text-lg sm:text-xl shadow-lg flex-shrink-0">PK</div>
+                                <div>
+                                    <p class="font-bold text-gray-900 text-base sm:text-lg">Priya Kumar</p>
+                                    <p class="text-gray-600 text-sm sm:text-base">Investor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="min-w-full px-2 sm:px-3 md:px-4">
+                        <div class="group bg-white/80 backdrop-blur-sm p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 hover:-translate-y-2">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="flex items-center gap-1 mb-4 sm:mb-5 md:mb-6">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <span class="ml-2 text-sm sm:text-base font-bold text-gray-700">5.0</span>
+                            </div>
+                            
+                            <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-5 sm:mb-6 md:mb-8 leading-relaxed italic">"Best real estate experience! The modern approach exceeded all expectations. Professional, efficient, and truly customer-focused."</p>
+                            
+                            <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white font-bold text-lg sm:text-xl shadow-lg flex-shrink-0">AM</div>
+                                <div>
+                                    <p class="font-bold text-gray-900 text-base sm:text-lg">Amit Mehta</p>
+                                    <p class="text-gray-600 text-sm sm:text-base">Property Buyer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation dots -->
+            <div class="flex justify-center gap-2 mt-8 sm:mt-10">
+                <button class="w-3 h-3 rounded-full bg-cyan-600 transition-all testimonial-indicator" data-index="0"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all testimonial-indicator" data-index="1"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all testimonial-indicator" data-index="2"></button>
+            </div>
+        </div>
+    </section>
                             <div class="flex text-yellow-400 text-2xl mb-6">★★★★★</div>
                             <p class="text-xl text-gray-700 mb-8 leading-relaxed italic">"Incredible service and innovative tools. The team is highly professional!"</p>
                             <div class="flex items-center">

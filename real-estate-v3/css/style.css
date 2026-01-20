@@ -45,3 +45,213 @@ body {
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
+/* Focus states for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 2px;
+}
+
+/* Enhanced button interactions */
+button, [class*="border-amber"] { 
+    transition: all 0.2s ease; 
+}
+button:active, [class*="border-amber"]:active {
+    transform: scale(0.98);
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(184, 134, 11, 0.9));
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 50%;
+    color: #1a1a1a;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 1), rgba(184, 134, 11, 1));
+}
+.scroll-to-top.show {
+    display: flex;
+}
+
+/* Smooth transitions for interactive elements */
+input, textarea, select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus, textarea:focus, select:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* ======= RESPONSIVE MEDIA QUERIES ======= */
+
+/* Mobile Devices (320px to 640px) */
+@media (max-width: 640px) {
+    /* Hide split layout on mobile */
+    .grid.md\:grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Hero Section */
+    .relative.min-h-screen {
+        min-height: auto;
+        padding-top: 80px;
+    }
+    
+    .flex.items-center.justify-center {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Text Adjustments */
+    h1 {
+        font-size: 1.875rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Buttons */
+    a[class*="bg-amber"],
+    a[class*="text-amber"] {
+        display: block;
+        text-align: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .space-y-4 > * + * {
+        margin-top: 1rem;
+    }
+    
+    /* Hide right column image on mobile */
+    .hidden.md\:block.parallax-slow {
+        display: none !important;
+    }
+    
+    /* Stats Grid */
+    .grid.grid-cols-2.md\:grid-cols-4 {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Stats Text */
+    .text-5xl.md\:text-6xl {
+        font-size: 2rem;
+    }
+    
+    .text-neutral-400 {
+        font-size: 0.75rem;
+    }
+    
+    /* About Section */
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .grid.md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Elegant dividers */
+    .elegant-divider {
+        margin: 1rem auto;
+    }
+}
+
+/* Tablet Devices (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .relative.min-h-screen {
+        padding-top: 100px;
+    }
+    
+    .flex.items-center.justify-center {
+        padding: 3rem 2rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .grid.md\:grid-cols-2 {
+        gap: 2rem;
+    }
+    
+    .grid.grid-cols-2.md\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .text-5xl.md\:text-6xl {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Large Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    .grid.grid-cols-2.md\:grid-cols-4 {
+        gap: 3rem;
+    }
+}
+
+/* Extra Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 4rem;
+    }
+    
+    .relative.min-h-screen {
+        min-height: 100vh;
+    }
+}
+
+/* Landscape Mode */
+@media (max-height: 700px) and (orientation: landscape) {
+    .relative.min-h-screen {
+        min-height: auto;
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    p {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+}
+

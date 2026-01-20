@@ -4,6 +4,9 @@ const mobileMenu = document.getElementById('mobileMenu');
 
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    // Add ARIA attribute for accessibility
+    const isExpanded = !mobileMenu.classList.contains('hidden');
+    mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
 });
 
 // Smooth Scroll
@@ -63,10 +66,12 @@ function updateTestimonials() {
     testimonialsContainer.style.transform = `translateX(${translateX}%)`;
 }
 
-setInterval(() => {
-    testimonialIndex = (testimonialIndex + 1) % testimonialSlides.length;
-    updateTestimonials();
-}, 7000);
+if (testimonialSlides.length > 0) {
+    setInterval(() => {
+        testimonialIndex = (testimonialIndex + 1) % testimonialSlides.length;
+        updateTestimonials();
+    }, 7000);
+}
 
 // Header Scroll Effect
 window.addEventListener('scroll', () => {
@@ -87,4 +92,34 @@ window.addEventListener('scroll', () => {
         element.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+if (!scrollToTopBtn && typeof document !== 'undefined') {
+    const btn = document.createElement('button');
+    btn.id = 'scrollToTopBtn';
+    btn.className = 'scroll-to-top';
+    btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>';
+    btn.setAttribute('aria-label', 'Scroll to top');
+    btn.setAttribute('title', 'Back to top');
+    document.body.appendChild(btn);
+}
+
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollToTopBtn');
+    if (btn) {
+        if (window.scrollY > 300) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }
+});
+
+const scrollBtn = document.getElementById('scrollToTopBtn');
+if (scrollBtn) {
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
