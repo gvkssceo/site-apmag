@@ -404,6 +404,7 @@ button, a[class*="bg-"] {
     
     .hero-section .grid {
         gap: 1.5rem !important;
+        grid-template-columns: 1fr !important;
     }
     
     .hero-section h1 {
@@ -415,6 +416,22 @@ button, a[class*="bg-"] {
     .hero-section p {
         font-size: 1rem;
         margin-bottom: 1.25rem;
+    }
+    
+    /* Better button sizing for tablet */
+    .hero-section a[class*="bg-gradient"],
+    .hero-section a[class*="bg-white"] {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9375rem !important;
+        min-height: 44px;
+    }
+    
+    /* Better input/select sizing for tablet */
+    .hero-section input,
+    .hero-section select {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.9375rem !important;
+        min-height: 44px;
     }
 }
 
@@ -433,6 +450,7 @@ button, a[class*="bg-"] {
     
     .hero-section .grid {
         gap: 2rem !important;
+        grid-template-columns: 1fr !important;
     }
     
     .hero-section h1 {
@@ -455,6 +473,27 @@ button, a[class*="bg-"] {
     
     .hero-section .fade-up > * + * {
         margin-top: 0.875rem !important;
+    }
+    
+    /* Better button sizing for tablet */
+    .hero-section a[class*="bg-gradient"],
+    .hero-section a[class*="bg-white"] {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9375rem !important;
+        min-height: 44px;
+    }
+    
+    /* Better input/select sizing for tablet */
+    .hero-section input,
+    .hero-section select {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.9375rem !important;
+        min-height: 44px;
+    }
+    
+    /* Search module adjustments */
+    .hero-section .bg-white\/80 {
+        padding: 1.25rem !important;
     }
 }
 
